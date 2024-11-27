@@ -1,0 +1,228 @@
+/* Tło pulpitu */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('/images/wallpapers/default.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Pulpit */
+#desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 40px; /* Pasek zadań */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 15px;
+}
+
+/* Pasek zadań */
+#taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Start Button */
+#start-button {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+}
+#start-button img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Taskbar - aktywne okna */
+#taskbar-apps {
+    flex-grow: 1;
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+}
+.taskbar-window {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.taskbar-window:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Zegar */
+#taskbar-clock {
+    font-size: 14px;
+    text-align: right;
+}
+
+/* Menu Start */
+#start-menu {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    left: 10px;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+#start-menu .start-menu-header {
+    background: #0078d7;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+#start-menu .start-menu-body {
+    padding: 10px;
+}
+#start-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#start-menu li {
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#start-menu li:hover {
+    background: rgba(0, 120, 215, 0.2);
+}
+
+/* Ikony na pulpicie */
+/* Normalny wygląd ikon */
+#desktop .desktop-icon {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    width: 80px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Podświetlona ikona */
+#desktop .desktop-icon.selected {
+    background-color: rgba(0, 120, 215, 0.2); /* Niebieski półprzezroczysty */
+    box-shadow: 0 0 10px rgba(0, 120, 215, 0.5);
+}
+
+/* Styl dla obrazu w ikonie */
+#desktop .desktop-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Styl dla podpisu */
+#desktop .desktop-icon span {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+}
+
+#desktop .desktop-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Okna aplikacji */
+.window {
+    position: absolute;
+    background: #e3e3e3;
+    border: 1px solid #a6a6a6;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 400px;
+    height: 300px;
+    resize: both;
+    min-width: 200px;
+    min-height: 150px;
+}
+
+/* Nagłówek okna */
+.window .window-header {
+    background: linear-gradient(to bottom, #0078d7, #005a9e);
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: grab;
+    user-select: none;
+}
+
+/* Ikona aplikacji w nagłówku */
+.window .window-header .window-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+}
+
+/* Przyciski w nagłówku */
+.window .window-header .window-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.window .window-header .window-controls button {
+    width: 20px;
+    height: 20px;
+    background: #0078d7;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.window .window-header .window-controls button:hover {
+    background: #005a9e;
+}
+
+.window .window-header .window-controls button.close {
+    background: #d9534f;
+}
+
+.window .window-header .window-controls button.close:hover {
+    background: #b52a2a;
+}
+
+/* Zawartość okna */
+.window .window-content {
+    padding: 10px;
+    height: calc(100% - 35px); /* Odejmujemy wysokość nagłówka */
+    overflow: auto;
+    background: white;
+}
+
+/* Styl dla okien w stanie minimalizacji */
+.window.minimized {
+    display: none;
+}

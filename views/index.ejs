@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Windows 7</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Pulpit -->
+    <div id="desktop">
+        <!-- Ikony aplikacji (dodawane dynamicznie przez skrypt JS) -->
+    </div>
+
+    <!-- Pasek zadań -->
+    <div id="taskbar">
+        <div id="start-button">
+            <img src="/images/start-button.png" alt="Start">
+        </div>
+        <div id="taskbar-apps">
+            <!-- Dynamicznie dodawane aktywne okna -->
+        </div>
+        <div id="taskbar-clock">
+            <span id="clock-time">00:00</span>
+        </div>
+    </div>
+
+    <!-- Menu Start -->
+    <div id="start-menu">
+        <div class="start-menu-header">
+            <span>Start</span>
+        </div>
+        <div class="start-menu-body">
+            <ul id="start-menu-categories">
+                <!-- Kategorie aplikacji -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Skrypt obsługujący system -->
+    <script src="/js/index.js"></script>
+</body>
+</html>

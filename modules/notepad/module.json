@@ -1,0 +1,8 @@
+{
+    "key": "notepad",
+    "name": "Notatnik",
+    "icon": "/apps/notepad/public/icon.png",
+    "url": "/apps/notepad",
+    "startMenuCategory": "Aplikacje biurowe",
+    "protected": true
+}

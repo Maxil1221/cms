@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Notatnik",
+        "key": "notepad",
+        "icon": "/images/apps/notepad-icon.png",
+        "startMenuCategory": "Narzędzia",
+        "url": "/apps/notepad",
+        "systemApp": true
+    },
+    {
+        "name": "Kalkulator",
+        "key": "calculator",
+        "icon": "/images/apps/calculator-icon.png",
+        "startMenuCategory": "Narzędzia",
+        "url": "/apps/calculator",
+        "systemApp": true
+    }
+]
